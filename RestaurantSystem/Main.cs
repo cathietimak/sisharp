@@ -35,8 +35,8 @@ namespace RestaurantSystem
 
             // 4. Створення замовлень
             Console.WriteLine("\n=== РОБОТА З ЗАМОВЛЕННЯМИ ===");
-            var order1 = orderSystem.CreateOrder(3);  // стіл №3
-            var order2 = orderSystem.CreateOrder(5);  // стіл №5
+            var order1 = orderSystem.CreateOrder(3);  // стіл 3
+            var order2 = orderSystem.CreateOrder(5);  // стіл 5
 
             // Додавання позицій
             orderSystem.AddItemToOrder(order1.Id, 1, 2);  // 2 борщі
@@ -74,7 +74,7 @@ namespace RestaurantSystem
             orderSystem.DisplayActiveOrders();  // покаже лише замовлення #2
 
             // 8. Явний downcast (демонстрація)
-            Console.WriteLine("\n=== DEMONSTRAЦІЯ UPCAST/DOWNCAST ===");
+            Console.WriteLine("\n=== ДЕМОНСТРАЦІЯ UPCAST/DOWNCAST ===");
             var itemById = menu.GetItemById(5);  // Вино червоне (Beverage)
             if (itemById != null)
             {
@@ -87,7 +87,7 @@ namespace RestaurantSystem
                     Console.WriteLine($"  Об'єм: {beverage.Volume} мл, ціна: {beverage.Price:C}");
                 }
 
-                // Альтернативний downcast через 'as'
+                // Альтернативний downcast через 
                 var asDish = itemById as Dish;
                 if (asDish == null)
                 {
